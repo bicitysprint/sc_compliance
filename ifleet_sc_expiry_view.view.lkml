@@ -96,6 +96,17 @@ view: ifleet_sc_expiry_view {
     sql: ${TABLE}."USERID" ;;
   }
 
+
+dimension: expiry_category {
+
+  type: string
+  sql: ${TABLE}."EXPIRY_CATEGORY" ;;
+
+
+}
+
+
+
   measure: count {
     type: count
     drill_fields: [drilldown*]
