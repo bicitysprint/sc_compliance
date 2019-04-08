@@ -98,6 +98,20 @@ view: ifleet_sc_expiry_view {
 
   measure: count {
     type: count
-    drill_fields: [sc_name, doc_name]
+    drill_fields: [drilldown*]
   }
+
+
+
+
+  set:drilldown {
+
+    fields: [created_date, expiry_date, current_date, days_left, type_no, universal, sc_name,doc_name, report_section]
+
+  }
+
+
+
+
+
 }
