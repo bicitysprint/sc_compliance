@@ -9,3 +9,6 @@ datagroup: sc_compliance_default_datagroup {
 }
 
 persist_with: sc_compliance_default_datagroup
+
+
+explore: ifleet_sc_expiry_view {}
