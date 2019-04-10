@@ -66,10 +66,10 @@ view: ifleet_sc_expiry_view {
     sql: ${TABLE}."FILESID" ;;
   }
 
-  dimension: report_section {
-    type: string
-    sql: ${TABLE}."REPORT_SECTION" ;;
-  }
+  ##dimension: report_section {
+    ##type: string
+    ##sql: ${TABLE}."REPORT_SECTION" ;;
+  ##}
 
   dimension: sc_name {
     type: string
@@ -104,6 +104,50 @@ dimension: expiry_category {
 
 
 }
+
+
+  parameter: report_section {
+    type: unquoted
+    default_value: "expired"
+    allowed_value: {
+      value: "expired"
+      label: "Expired"
+    }
+    allowed_value: {
+      value: "expires today"
+      label: "Expires today"
+    }
+    allowed_value: {
+      value: "expires within 7 days"
+      label: "Expires within 7 days"
+    }
+
+    allowed_value: {
+      value: "expires within 30 days"
+      label: "Expires within 30 days"
+    }
+
+    allowed_value: {
+      value: "30+ days left until expiry"
+      label: "30+ days left until expiry"
+    }
+
+    allowed_value: {
+      value: "no expiry date"
+      label: "No expiry date"
+    }
+
+
+  }
+
+
+  dimension: product_hierarchy {
+    label_from_parameter: report_section
+    type: string
+    sql: ${TABLE}.{{ report_section._parameter_value }} ;;
+  }
+
+
 
 
 
