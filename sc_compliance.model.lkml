@@ -5,7 +5,7 @@ include: "*.view"
 
 datagroup: sc_compliance_default_datagroup {
   # sql_trigger: SELECT MAX(id) FROM etl_log;;
-  max_cache_age: "10 hour"
+  max_cache_age: "5 hour"
 }
 
 persist_with: sc_compliance_default_datagroup
