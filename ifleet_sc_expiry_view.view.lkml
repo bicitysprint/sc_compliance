@@ -120,7 +120,7 @@ dimension: expiry_category {
 
   set:drilldown {
 
-    fields: [created_date, expiry_date, current_date, days_left, type_no, universal, sc_name,doc_name, email, report_section]
+    fields: [created_date, expiry_date, current_date, days_left, type_no, universal, sc_name,doc_name,filesid, email, report_section]
 
   }
 
