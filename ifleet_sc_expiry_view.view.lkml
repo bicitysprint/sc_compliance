@@ -36,7 +36,7 @@ view: ifleet_sc_expiry_view {
     sql: ${TABLE}."DAYS_LEFT" ;;
   }
 
-  dimension: expiry_status {
+  dimension: expired_more_than {
     type: string
     sql:
 
