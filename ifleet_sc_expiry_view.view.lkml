@@ -41,10 +41,10 @@ view: ifleet_sc_expiry_view {
     sql:
 
     case
-      when ${days_left} =0 then 'expires today'
-      when ${days_left} <=-1 then 'expired'
-      when ${days_left} >= 1 then 'not yet expired'
-      when ${days_left} IS NULL then 'no expiry date'
+      when ${days_left} =0 then 'EXPIRES TODAY'
+      when ${days_left} <=-1 then 'EXPIRED'
+      when ${days_left} >= 1 then 'NOT YET EXPIRED'
+      when ${days_left} IS NULL then 'NO EXPIRY DATE'
       else 'other' end    ;;
   }
 
