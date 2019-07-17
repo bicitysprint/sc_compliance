@@ -137,10 +137,10 @@ view: ifleet_sc_expiry_view {
     drill_fields: [drilldown*]
   }
 
-  measure: sum {
-    type: sum
-    sql: ${expiry_status} ;;
-  }
+  ##measure: sum {
+  ##  type: sum
+  ##  sql: ${expiry_status} ;;
+  ##}
 
 
   set:drilldown {
