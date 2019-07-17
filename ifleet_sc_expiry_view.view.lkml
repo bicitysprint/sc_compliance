@@ -98,14 +98,17 @@ view: ifleet_sc_expiry_view {
 
 
 dimension: expiry_category {
-
   type: string
   sql: ${TABLE}."EXPIRY_CATEGORY" ;;
 
 
 }
 
-
+  measure: days_since_expiry_count {
+    type: list
+    list_field: days_left
+    sql: ${TABLE}."DAYS_LEFT" ;;
+  }
 
 
 
