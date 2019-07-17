@@ -43,7 +43,7 @@ view: ifleet_sc_expiry_view {
     case
 
     when ${days_left} <=-2 and ${days_left} >=-7 then 'A DAY AGO'
-      when ${days_left} <=-8 and ${days_left} >=-14 then '7 DAYS AGO'
+      when ${days_left} <=-8 and ${days_left} >=-14 then '07 DAYS AGO'
       when ${days_left} <=-15 and ${days_left} >=-30 then '14 DAYS AGO'
       when ${days_left} <=-31 and ${days_left} >=-60 then '30 DAYS AGO'
       when ${days_left} <=-61 and ${days_left} >=-90 then '60 DAYS AGO'
