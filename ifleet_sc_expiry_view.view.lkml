@@ -115,10 +115,10 @@ view: ifleet_sc_expiry_view {
   }
 
 
-##dimension: expiry_category {
-##  type: string
-##  sql: ${TABLE}."EXPIRY_CATEGORY" ;;
-
+ dimension: expiry_category {
+  type: string
+  sql: ${TABLE}."EXPIRY_CATEGORY" ;;
+  }
 
 
 
