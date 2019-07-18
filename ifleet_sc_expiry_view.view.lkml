@@ -48,7 +48,7 @@ view: ifleet_sc_expiry_view {
       when ${days_left} <=-31 and ${days_left} >=-60 then '30 DAYS AGO'
       when ${days_left} <=-61 and ${days_left} >=-90 then '60 DAYS AGO'
       when ${days_left} <=-91 then '90 DAYS AGO'
-      else 'OTHER' end    ;;
+      else 'NOT YET EXPIRED' end    ;;
   }
 
 
